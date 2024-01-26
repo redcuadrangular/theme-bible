@@ -24,5 +24,13 @@ jobs:
 
     - name: Build
       run: |
-        npm install
-        gulp
+        npm install --quiet --no-progress --cache=.cache/npm
+        node_modules/.bin/gulp
+        node_modules/.bin/gulp lint
+        node_modules/.bin/gulp bundle
+    - uses: Shopify/upload-to-release@v2.0.0
+      with:
+        name: coderic-theme-docs.zip
+        path: build/ui-bundle.zip
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        content-type: application/zip
