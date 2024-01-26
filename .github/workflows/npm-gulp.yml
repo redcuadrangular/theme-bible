@@ -23,6 +23,7 @@ jobs:
         node_modules/.bin/gulp
         node_modules/.bin/gulp lint
         node_modules/.bin/gulp bundle
+        node_modules/.bin/gulp preview:build
         cp build/ui-bundle.zip ./public
     - name: Setup Pages
       uses: actions/configure-pages@v4
