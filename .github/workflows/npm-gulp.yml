@@ -24,9 +24,8 @@ jobs:
         node_modules/.bin/gulp
         node_modules/.bin/gulp lint
         node_modules/.bin/gulp bundle
-    - uses: actions/upload-artifact@v4
+        cp build/ui-bundle.zip ./public
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
       with:
-        name: coderic-theme-docs.zip
-        path: build/ui-bundle.zip
-#        repo-token: ${{ secrets.GITHUB_TOKEN }}
-#        content-type: application/zip
+        path: ./public
