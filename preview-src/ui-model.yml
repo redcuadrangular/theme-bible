@@ -5,7 +5,7 @@ site:
   homeUrl: &home_url /xyz/5.2/index.html
   components:
   - name: abc
-    title: Project ABC
+    title: Proyecto ABC
     url: '#'
     versions:
     - &latest_version_abc
@@ -18,7 +18,7 @@ site:
     latestVersion: *latest_version_abc
   - &component
     name: xyz
-    title: &component_title Project XYZ
+    title: &component_title Proyecto XYZ
     url: /xyz/6.0/index.html
     versions:
     - &latest_version_xyz
@@ -38,7 +38,7 @@ site:
       displayVersion: '5.0'
     latestVersion: *latest_version_xyz
   - name: '123'
-    title: Project 123
+    title: Proyecto 123
     url: '#'
     versions:
     - &latest_version_123
@@ -66,7 +66,7 @@ page:
   origin:
     private: false
   previous:
-    content: Quickstart
+    content: Empezar
     url: '#'
     urlType: 'internal'
   next:
@@ -74,7 +74,7 @@ page:
     url: '#'
     urlType: 'internal'
   breadcrumbs:
-  - content: Quickstart
+  - content: Empezar
     url: '#'
     urlType: fragment
   - content: Brand&#8217;s Hardware &amp; Software Requirements
@@ -97,7 +97,7 @@ page:
   navigation:
   - root: true
     items:
-    - content: Quickstart
+    - content: Empezar
       url: '#'
       urlType: fragment
       items:
@@ -113,7 +113,7 @@ page:
     - content: Liber Recusabo
       url: '#liber-recusabo'
       urlType: fragment
-    - content: Reference
+    - content: Referencia
       items:
       - content: Keyboard Shortcuts
         url: '#'
