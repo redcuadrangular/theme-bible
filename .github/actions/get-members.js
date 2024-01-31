@@ -14,12 +14,11 @@ octokit.request('GET /orgs/{org}/members', {
 }).then(( data )=>{
   doc.contents = data;
   let result = doc.toString();
-  console.log(result);
-  fs.writeFile('test.txt', result, err => {
+  fs.writeFile('./public/members.yml', result, err => {
     if (err) {
       console.error(err);
     } else {
-      // file written successfully
+      console.log(result);
     }
   });
 });
