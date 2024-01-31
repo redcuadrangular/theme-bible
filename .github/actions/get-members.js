@@ -1,7 +1,8 @@
 const { Octokit } = require("@octokit/action");
 const YAML = require('yaml')
 const doc = new YAML.Document();
-import fs from 'fs'
+import * as fs from 'fs';
+
 
 const octokit = new Octokit();
 const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
