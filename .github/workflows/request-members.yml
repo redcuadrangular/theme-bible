@@ -1,6 +1,8 @@
 name: Request Members
 on:
-  - pull_request
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["master"]
 jobs:
   my-action:
     runs-on: ubuntu-latest
