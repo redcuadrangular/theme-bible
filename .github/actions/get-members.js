@@ -1,8 +1,7 @@
 const { Octokit } = require("@octokit/action");
 const YAML = require('yaml')
+const fs = require('node:fs');
 const doc = new YAML.Document();
-import * as fs from 'fs';
-
 
 const octokit = new Octokit();
 const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
@@ -14,6 +13,14 @@ octokit.request('GET /orgs/{org}/members', {
   }
 }).then(( data )=>{
   doc.contents = data;
-  console.log(doc.toString());
+  let result = doc.toString();
+  console.log(result);
+  fs.writeFile('test.txt', result, err => {
+    if (err) {
+      console.error(err);
+    } else {
+      // file written successfully
+    }
+  });
 });
 
