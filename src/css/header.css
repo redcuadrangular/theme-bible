@@ -23,6 +23,12 @@ body {
   text-decoration: none;
 }
 
+.navbar-brand-img {
+  width: 172px;
+  height: 32px;
+  margin: auto 0;
+}
+
 .navbar-brand {
   display: flex;
   flex: auto;
